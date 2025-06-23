@@ -1,0 +1,60 @@
+.Main {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #EAE4D5;
+    box-shadow: 0 2rem 2.5rem rgba(0, 0, 0, 0.5);
+
+}
+
+.navbar {
+    background-color: #EAE4D5;
+    width: 100%;
+    height: 7rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.list {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    gap: .5rem;
+}
+
+.listItem {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.aLink {
+    background-color: #eae4d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border: solid 2px black;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, 0.5);
+
+}
+
+.aLink:hover {
+    cursor: pointer;
+    background-color: rgb(226, 217, 192);
+}
+
+.aLink:active {
+    background-color: #B6B09F;
+
+}

@@ -1,0 +1,23 @@
+.book {
+    display: flex;
+}
+
+.number {
+    font-size: 2rem;
+    font-weight: 1000;
+    padding-right: 2rem;
+}
+
+.bookInfo {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.bookAuthor {
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    font-style: italic;
+}

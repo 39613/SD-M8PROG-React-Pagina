@@ -1,0 +1,22 @@
+.top10Section {
+    width: 90%;
+    margin-bottom: 3rem;
+}
+
+.top10List {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 2rem;
+    min-height: 40%;
+    color: black;
+    margin: 2rem;
+}
+
+.list {
+    list-style: none;
+}
+
+.title {
+    padding-bottom: 2rem;
+}

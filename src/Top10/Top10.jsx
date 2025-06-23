@@ -1,0 +1,75 @@
+import styles from "./Top10.module.css";
+import { Top10Item } from "./Top10Item";
+
+export function Top10() {
+  let top10 = [
+    {
+      title: "Bleach",
+      Creator: "Tite Kubo",
+      href: "https://www.google.com/search?q=Bleach&sca_esv=5eae2f8f5e851a2c&rlz=1C5CHFA_enNL1151NL1151&sxsrf=AE3TifMFn6oor-JipzB_VUNtMpcsqkerng%3A1748249425151&ei=USs0aMCCCfaPi-gPj8iEkAo&ved=0ahUKEwiA79vP4MCNAxX2xwIHHQ8kAaIQ4dUDCBA&uact=5&oq=Bleach&gs_lp=Egxnd3Mtd2l6LXNlcnAiBkJsZWFjaDIKECMYgAQYJxiKBTIQEC4YgAQYsQMYQxjUAhiKBTIQEC4YgAQYsQMYQxjUAhiKBTILEAAYgAQYsQMYgwEyEBAuGIAEGLEDGEMY1AIYigUyCBAAGIAEGMsBMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgUQABiABDIFEAAYgAQyHxAuGIAEGLEDGEMY1AIYigUYlwUY3AQY3gQY4ATYAQFIsR5QqgVYnQxwA3gBkAEAmAFtoAHAA6oBAzUuMbgBA8gBAPgBAZgCCaAC-gPCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICDhAAGLADGOQCGNYE2AEBwgITEC4YgAQYsAMYQxjIAxiKBdgBAcICFhAuGIAEGLADGEMY1AIYyAMYigXYAQHCAg0QLhiABBhDGNQCGIoFwgIKEC4YgAQYQxiKBcICHBAuGIAEGEMY1AIYigUYlwUY3AQY3gQY4ATYAQHCAhAQABiABBixAxhDGIMBGIoFmAMAiAYBkAYTugYGCAEQARgJkgcDOC4xoAezU7IHAzUuMbgH7gM&sclient=gws-wiz-serp",
+    },
+    {
+      title: "The Glory",
+      Creator: "Kim Eun-sook",
+      href: "https://www.google.com/search?q=The+Glory&sca_esv=5eae2f8f5e851a2c&rlz=1C5CHFA_enNL1151NL1151&sxsrf=AE3TifNRSKl1XizqRky09BqGQbFI-suq6A%3A1748249315159&ei=4yo0aPS9CdTwi-gPo82igQg&ved=0ahUKEwi0u6Kb4MCNAxVU-AIHHaOmKIAQ4dUDCBA&uact=5&oq=The+Glory&gs_lp=Egxnd3Mtd2l6LXNlcnAiCVRoZSBHbG9yeTIKECMYgAQYJxiKBTINEC4YgAQYsQMYQxiKBTIFEAAYgAQyBRAAGIAEMgUQABiABDIKEAAYgAQYQxiKBTIIEC4YgAQYywEyBRAAGIAEMggQABiABBjLATIFEAAYgAQyHBAuGIAEGLEDGEMYigUYlwUY3AQY3gQY4ATYAQFIujRQiAVYgB5wAXgBkAEAmAGJAaABowSqAQMxLjS4AQPIAQD4AQGYAgagAtEEwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAg4QABiwAxjkAhjWBNgBAcICExAuGIAEGLADGEMYyAMYigXYAQHCAgcQIxixAhgnwgIKEC4YgAQYsQMYCsICBxAAGIAEGArCAhkQLhiABBixAxgKGJcFGNwEGN4EGOAE2AEBwgIREC4YgAQYxwEYmAUYjgUYrwHCAgYQABgHGB7CAg4QLhiABBjHARjLARivAcICIBAuGIAEGMcBGJgFGI4FGK8BGJcFGNwEGN4EGOAE2AEBmAMAiAYBkAYTugYGCAEQARgJkgcDMi40oAfZPrIHAzEuNLgHzgQ&sclient=gws-wiz-serp    },",
+    },
+    {
+      title: "Vincenzo",
+      Creator: "Park Jae-bum",
+      href: "https://www.google.com/search?rlz=1C5CHFA_enNL1151NL1151&sca_esv=5eae2f8f5e851a2c&cs=1&sxsrf=AE3TifPLZK-1vdz--yXOmqRQJQlrhKImAw:1748249478921&q=Vincenzo+Televisieprogramma&stick=H4sIAAAAAAAAAONgFuLVT9c3NCzMMyvJKisuUoJwc8uSqlIyynO1ZLKTrfRLyoAoPjkjsSgxuSS1yKqkTKE4I7-8eBGrdFhmXnJqXlW-QkhqTmpZZnFmakFRfnpRYm5uIgC9skXHXAAAAA&sa=X&ved=2ahUKEwiGgazp4MCNAxVC0AIHHTCQFPAQ9OUBegQIBRAD&biw=1470&bih=797&dpr=2",
+    },
+    {
+      title: "Bloodhounds",
+      Creator: "Kim Joo-hwan",
+      href: "https://www.google.com/search?q=Bloodhounds&rlz=1C5CHFA_enNL1151NL1151&sca_esv=5eae2f8f5e851a2c&cs=1&biw=1470&bih=797&sxsrf=AE3TifP8Q2VapMMzBHgvw02NDPPJ7lPOeQ%3A1748249481257&ei=iSs0aIK9D_Gxi-gPu6GbiQk&ved=0ahUKEwjCpbzq4MCNAxXx2AIHHbvQJpEQ4dUDCBA&uact=5&oq=Bloodhounds&gs_lp=Egxnd3Mtd2l6LXNlcnAiC0Jsb29kaG91bmRzMggQLhiABBjLATIFEAAYgAQyBRAAGIAEMgUQABiABDIIEAAYgAQYywEyCBAAGIAEGMsBMgUQABiABDIFEAAYgAQyCBAuGIAEGMsBMggQABiABBjLATIXEC4YgAQYywEYlwUY3AQY3gQY4ATYAQFI1F5QqFJY3FdwA3gBkAEAmAGoAaAB4AGqAQMxLjG4AQPIAQD4AQL4AQGYAgWgAvwBwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAg4QABiwAxjkAhjWBNgBAcICExAuGIAEGLADGEMYyAMYigXYAQHCAggQABiABBiiBMICBRAAGO8FmAMAiAYBkAYRugYGCAEQARgJkgcDNC4xoAf4ELIHAzEuMbgH5gE&sclient=gws-wiz-serp",
+    },
+    {
+      title: "A Shop For Killers",
+      Creator: "Kang Ji-young",
+      href: "https://www.google.com/search?q=A+Shop+for+Killers&rlz=1C5CHFA_enNL1151NL1151&sca_esv=5eae2f8f5e851a2c&cs=1&biw=1470&bih=797&sxsrf=AE3TifMVhfh6ukdXW04dRpqI48YvfwFiUg%3A1748249541803&ei=xSs0aK_qMMGwi-gP6NOv0Ao&ved=0ahUKEwjv4KuH4cCNAxVB2AIHHejpC6oQ4dUDCBA&uact=5&oq=A+Shop+for+Killers&gs_lp=Egxnd3Mtd2l6LXNlcnAiEkEgU2hvcCBmb3IgS2lsbGVyczIKECMYgAQYJxiKBTINEC4YgAQYsQMYQxiKBTIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIFEAAYgAQyBRAAGIAEMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMhwQLhiABBixAxhDGIoFGJcFGNwEGN4EGOAE2AEBSIAtUABYAHABeAGQAQCYAT2gAT2qAQExuAEDyAEA-AEC-AEBmAICoAJKmAMAugYGCAEQARgUkgcBMqAHnQmyBwExuAdF&sclient=gws-wiz-serp",
+    },
+    {
+      title: "Jujutsu Kaisen",
+      Creator: "Gege Akutami",
+      href: "https://www.google.com/search?q=Jujutsu+Kaisen&rlz=1C5CHFA_enNL1151NL1151&sca_esv=5eae2f8f5e851a2c&cs=1&biw=1470&bih=797&sxsrf=AE3TifOi_I61eap-wm1BaVskZ_bvl6iXxQ%3A1748249576020&ei=6Cs0aM2EAbO4i-gP5bTT-Ag&ved=0ahUKEwjNmNSX4cCNAxUz3AIHHWXaFI8Q4dUDCBA&uact=5&oq=Jujutsu+Kaisen&gs_lp=Egxnd3Mtd2l6LXNlcnAiDkp1anV0c3UgS2Fpc2VuMgoQIxiABBgnGIoFMgsQLhiABBjUAhjLATIFEAAYgAQyCBAAGIAEGMsBMgoQABiABBhDGIoFMggQLhiABBjLATILEC4YgAQY1AIYywEyCBAAGIAEGMsBMggQABiABBjLATIFEC4YgAQyGhAuGIAEGNQCGMsBGJcFGNwEGN4EGOAE2AEBSKkJUIwGWIwGcAJ4AZABAJgBYaABYaoBATG4AQPIAQD4AQL4AQGYAgOgAnbCAgoQABiwAxjWBBhHmAMAiAYBkAYIugYGCAEQARgUkgcDMi4xoAffD7IHAzAuMbgHbA&sclient=gws-wiz-serp",
+    },
+    {
+      title: "Prison Break",
+      Creator: "Paul Scheuring",
+      href: "https://www.google.com/search?q=Prison+Break&rlz=1C5CHFA_enNL1151NL1151&sca_esv=5eae2f8f5e851a2c&cs=1&biw=1470&bih=797&sxsrf=AE3TifPDg3aWqUBFFWZnMCrEr3paVNvUYQ%3A1748249587782&ei=8ys0aIe1L9jti-gPtO-XkAw&ved=0ahUKEwjH-qGd4cCNAxXY9gIHHbT3BcIQ4dUDCBA&uact=5&oq=Prison+Break&gs_lp=Egxnd3Mtd2l6LXNlcnAiDFByaXNvbiBCcmVhazIIEC4YgAQYsQMyCBAAGIAEGLEDMgUQABiABDIFEAAYgAQyBRAuGIAEMgsQABiABBixAxiDATIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIFEAAYgAQyFxAuGIAEGLEDGJcFGNwEGN4EGOAE2AEBSMUGUOEDWOEDcAN4AZABAJgBTKABTKoBATG4AQPIAQD4AQL4AQGYAgSgAmzCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICDhAAGLADGOQCGNYE2AEBwgITEC4YgAQYsAMYQxjIAxiKBdgBAZgDAIgGAZAGE7oGBggBEAEYCZIHATSgB_AJsgcBMbgHVQ&sclient=gws-wiz-serp",
+    },
+    {
+      title: "Dexter",
+      Creator: "James Manos Jr.",
+      href: "https://www.google.com/search?q=Dexter&rlz=1C5CHFA_enNL1151NL1151&sca_esv=5eae2f8f5e851a2c&cs=1&biw=1470&bih=797&sxsrf=AE3TifNeMf6_eDIKWI1uKbL92VCEEFJePQ%3A1748249598211&ei=_is0aNLWDNT1i-gP2ei5yAk&ved=0ahUKEwjSzZ6i4cCNAxXU-gIHHVl0DpkQ4dUDCBA&uact=5&oq=Dexter&gs_lp=Egxnd3Mtd2l6LXNlcnAiBkRleHRlcjIKECMYgAQYJxiKBTINEC4YgAQYsQMYQxiKBTINEC4YgAQYsQMYQxiKBTIIEC4YgAQYywEyDRAAGIAEGLEDGEMYigUyChAuGIAEGEMYigUyCBAuGIAEGMsBMggQLhiABBixAzILEC4YgAQYxwEYrwEyBRAuGIAEMhwQLhiABBixAxhDGIoFGJcFGNwEGN4EGOAE2AEBSIIVUM8JWPETcAN4AZABAJgBZqAB4AOqAQM1LjG4AQPIAQD4AQGYAgmgApsEwgIKEAAYsAMY1gQYR8ICDRAAGIAEGLADGEMYigXCAg4QABiwAxjkAhjWBNgBAcICExAuGIAEGLADGEMYyAMYigXYAQHCAgwQIxiABBgTGCcYigXCAgsQABiABBixAxiDAcICERAuGIAEGLEDGNEDGIMBGMcBwgIQEAAYgAQYsQMYQxiDARiKBcICCBAAGIAEGLEDmAMAiAYBkAYTugYGCAEQARgJkgcDNy4yoAe0kgGyBwM0LjK4B5EE&sclient=gws-wiz-serp",
+    },
+    {
+      title: "Peaky blinder",
+      Creator: "Steven Knight",
+      href: "https://www.google.com/search?q=Peaky+blinder&rlz=1C5CHFA_enNL1151NL1151&sca_esv=5eae2f8f5e851a2c&cs=1&biw=1470&bih=797&sxsrf=AE3TifMiON7IAhKkYtCOChlqXE-NXtS0NA%3A1748249618943&ei=Eiw0aJGuOaDQi-gPm5br8AE&ved=0ahUKEwiR_4-s4cCNAxUg6AIHHRvLGh4Q4dUDCBA&uact=5&oq=Peaky+blinder&gs_lp=Egxnd3Mtd2l6LXNlcnAiDVBlYWt5IGJsaW5kZXIyBBAjGCcyChAjGIAEGCcYigUyDRAuGIAEGLEDGEMYigUyCBAAGIAEGLEDMggQLhiABBixAzIIEAAYgAQYywEyChAAGIAEGEMYigUyBRAAGIAEMggQABiABBixAzIKEAAYgAQYQxiKBUj_B1CwBliwBnACeACQAQCYAUigAUiqAQExuAEDyAEA-AEC-AEBmAIDoAJWwgIJEAAYsAMYDRgewgILEAAYsAMYCBgNGB7CAgsQABiABBiwAxiiBMICCBAAGLADGO8FmAMA4gMFEgExIECIBgGQBgeSBwEzoAfLDLIHATG4B1E&sclient=gws-wiz-serp",
+    },
+    {
+      title: "One piece",
+      Creator: "Eiichiro Oda",
+      href: "https://www.google.com/search?q=One+Piece&rlz=1C5CHFA_enNL1151NL1151&sca_esv=5eae2f8f5e851a2c&cs=1&biw=1470&bih=797&sxsrf=AE3TifMv6Y3U_riaOvjJ5h4UM4tkTLC-Yw%3A1748249629861&ei=HSw0aL6uNLm3i-gPiIenkQU&ved=0ahUKEwj-sKqx4cCNAxW52wIHHYjDKVIQ4dUDCBA&uact=5&oq=One+Piece&gs_lp=Egxnd3Mtd2l6LXNlcnAiCU9uZSBQaWVjZTIKECMYgAQYJxiKBTITEC4YgAQYsQMYQxiDARjUAhiKBTITEC4YgAQYsQMYQxiDARjUAhiKBTITEC4YgAQYsQMYQxiDARjUAhiKBTIFEAAYgAQyCxAAGIAEGLEDGIMBMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMg4QABiABBixAxiDARiKBTIiEC4YgAQYsQMYQxiDARjUAhiKBRiXBRjcBBjeBBjgBNgBAUjcJlCWA1iqHnABeAGQAQCYAVegAZ4CqgEBNLgBA8gBAPgBAZgCBaACxgLCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICDhAAGLADGOQCGNYE2AEBwgITEC4YgAQYsAMYQxjIAxiKBdgBAcICBxAjGLECGCfCAg0QLhiABBjUAhgKGMsBwgIHEAAYgAQYCsICDRAAGIAEGLEDGIMBGArCAgoQABiABBixAxgKwgIQEAAYgAQYsQMYgwEYigUYCsICHBAuGIAEGNQCGAoYywEYlwUY3AQY3gQY4ATYAQHCAg4QLhiABBixAxiDARjUAsICHRAuGIAEGLEDGIMBGNQCGJcFGNwEGN4EGOAE2AEBmAMAiAYBkAYSugYGCAEQARgJkgcBNaAHxTSyBwE0uAfAAg&sclient=gws-wiz-serp",
+    },
+  ];
+
+  const list = top10.map((item, index) => (
+    <Top10Item
+      href={item.href}
+      title={item.title}
+      author={item.Creator}
+      number={index + 1}
+    />
+  ));
+
+  return (
+    <section className={styles.top10Section}>
+      <div className={styles.top10List}>
+        <h1>Top 10 Favorite series</h1>
+        <ol className={styles.book__list}>{list}</ol>
+      </div>
+    </section>
+  );
+}

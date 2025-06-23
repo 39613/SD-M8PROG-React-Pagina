@@ -1,0 +1,46 @@
+.cookieClicker {
+    background-color: rgb(129, 108, 92);
+    height: 33vh;
+    width: 85%;
+    margin: 2rem;
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    border: 3px dotted black;
+    display: flex;
+    flex-direction: row;
+}
+
+.textDiv {}
+
+.cookie {
+    width: 200px;
+    height: 200px;
+    border: none;
+    border-radius: 50%;
+    background: brown;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.upgrade,
+.cookie:hover {
+    cursor: pointer;
+}
+
+.cookie:active {
+    background: rgb(135, 33, 33);
+}
+
+.upgrade {
+    background: rgb(255, 255, 255);
+    border: none;
+    font-size: 1.3rem;
+    padding: .8rem;
+    margin-left: .4rem;
+
+}
+
+.upgrade:active {
+    background-color: rgb(168, 168, 168);
+}

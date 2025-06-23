@@ -1,0 +1,13 @@
+.li {}
+
+
+.vraag {}
+
+.antwoord {
+    border: solid black 1px;
+    border-radius: .3rem;
+    padding: .3rem;
+    width: 50%;
+    background-color: rgb(174, 171, 171);
+
+}

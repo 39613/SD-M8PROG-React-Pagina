@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+    /* alles reseten*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    font-size: 1.6rem;
+}
+
+html {
+    /* de html Font size op 10 pixels zetten. 1rem => 10px */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #B6B09F;
+}
+
+#root {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}

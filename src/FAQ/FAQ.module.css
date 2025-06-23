@@ -1,0 +1,22 @@
+.mainSection {
+    display: flex;
+    justify-content: center;
+}
+
+.vraagSection {
+    background-color: rgb(138, 123, 123);
+    width: 50%;
+    min-height: 20vh;
+    margin: 3rem;
+    border: solid black 2px;
+}
+
+.Title {
+    background-color: rgb(255, 255, 255);
+    border-bottom: solid black 1px;
+}
+
+.list {
+    list-style: none;
+    padding: 1em;
+}
